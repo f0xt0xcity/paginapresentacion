@@ -1,0 +1,389 @@
+:root {
+  --primary : #112A46;
+  --secondary : #213f60;
+
+  --bg-primary : #F5E0B7;
+  --bg-primary : #e8ce9c;
+
+}
+
+.header {
+  background-color: var(--bg-primary);
+}
+
+.header--container {
+  background-color: #e8ce9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 2rem;
+}
+
+
+.header--name {
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.nav--list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+
+.nav--link:link,
+.nav--link:visited {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 2rem;
+  
+  transition: color .3s;
+}
+
+@media (min-width : 1024px) {
+  .header--container {
+    justify-content: flex-end;
+  }
+  .nav--list {
+    flex-direction: row;
+    row-gap: 0;
+  }
+  .nav--link:active,
+  .nav--link:link {
+    margin-right: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+.nav--link:hover,
+.nav--link:active {
+  color: var(--secondary);
+}
+
+
+/* /////////////////////////////////// */
+/* //////////// Main section ////////// */
+/* /////////////////////////////////// */
+
+.about--section {
+  max-width: 100%;
+  padding: 4rem;
+}
+
+/* @media (min-width : 1024px) { 
+  .about--section {
+    background-image: url(img/fondo.webp);
+    background-repeat: no-repeat;
+    background-position: 15rem 0rem;
+    background-size: contain;
+  }
+} */
+
+@media (min-width : 1440px) { 
+  .about--section {
+    background-position: 23rem 0rem;
+  }
+}
+
+
+@media (min-width : 1024px) {
+  .about--section {
+    padding: 0rem 6.6rem 4.6rem 6.6rem;
+  }
+}
+
+.about--container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 120rem;
+}
+
+@media (min-width : 1024px) {
+  .about--container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.about--content {
+}
+
+@media (min-width : 1024px) { 
+  .about--content {
+    grid-column: 2 / 3;
+  }
+ }
+
+.about--img {
+  border-radius: 9px;
+  width: 28rem;
+  height: 40rem;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+
+@media (min-width : 1024px) {
+  .about--img {
+    width: 80%;
+    height: 90%;
+    margin-bottom: 0;
+  }
+}
+
+.about--title {
+  margin-bottom: 5rem;
+  color: var(--primary);
+}
+
+.about--description {
+  margin-bottom: 3.2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--primary);
+}
+
+@media (min-width : 1024px) { 
+  .about--description {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+ }
+
+/* /////////////////////////////////// */
+/* //////////// Skills section ////////// */
+/* /////////////////////////////////// */
+
+.skills--list {
+  display: grid;
+  justify-content: center;
+  row-gap: 3rem;
+}
+
+.btn--cta {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width : 1024px) {
+  .skills--list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn--cta {
+    display: inline;
+  }
+}
+
+.skill--card {
+  width: 30rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, .075);
+  border-radius: 9px;
+
+  transition: all .3s;
+}
+
+
+.skill--card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, .06);
+}
+
+.skill--logo {
+  border-radius: 9px 9px 0 0;
+  width: 100%;
+  height: 40%;
+}
+
+.skill--content {
+  padding: 2rem 4rem;
+}
+
+.skill--subtitle,
+.skill--description {
+  
+}
+
+.skill--list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list--item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  line-height: 1.2;
+}
+
+.list--icon {
+  width: 30px;
+  height: 30px;
+  color: var(--secondary);
+}
+
+/* /////////////////////////////////// */
+/* //////////// Udemy section ////////// */
+/* /////////////////////////////////// */
+
+.udemy--section {
+}
+
+.udemy--content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+
+  height: 20rem;
+}
+
+.udemy--subtitle {
+  font-size: 3.2rem;
+}
+
+@media (min-width : 1024px) { 
+  .udemy--subtitle {
+    font-size: 6rem;
+  }
+ }
+
+.udemy--subtitle span {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 .4rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: dots;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@media (min-width : 1024px) { 
+  .udemy--subtitle span {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 .5rem;
+  }
+ }
+
+.udemy--subtitle span:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.udemy--subtitle span:nth-child(3) {
+  animation-delay: .8s;
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform : scale(0.7) translateY(10px)
+  }
+}
+
+
+/* /////////////////////////////////// */
+/* //////////// Certifications section ////////// */
+/* /////////////////////////////////// */
+
+.certifications--section {
+}
+
+.certifications--list {
+  display: grid;
+  row-gap: 3rem;
+}
+
+@media (min-width : 1024px) { 
+  .certifications--list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.certification {
+  margin-top: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.certification--icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.certification--subtitle {
+  font-weight: 500;
+}
+
+.certification--description {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.btn--certifications {
+  box-shadow: inset 0 0 0 3px #252827;
+  color: #252827;
+
+  transition: all .3s;
+}
+
+.btn--certifications:hover,
+.btn--certifications:active {
+  box-shadow: none;
+  background-color: var(--bg-primary);
+  color: #fff;
+}
+
+.portfolio__project {
+  background-color: #fff;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, .075);
+
+  border-radius: 9px;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+}
+
+@media (min-width : 1024px) {
+  .portfolio__project {
+    grid-template-columns: 2fr 1fr;
+    row-gap: 3.2rem;
+  }
+}
+
+
+.project__title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.project__description {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.project__link {
+  background-color: #252827;
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+  margin-bottom : 1.4rem;
+  font-size: 1.6rem;
+}
