@@ -35,9 +35,11 @@
 
 .nav--link:link,
 .nav--link:visited {
+  cursor: pointer;
   font-weight: 500;
   text-decoration: none;
   color: var(--primary);
+  text-decoration: underline;
   font-size: 2rem;
   
   transition: color .3s;
